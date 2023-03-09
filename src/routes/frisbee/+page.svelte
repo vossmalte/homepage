@@ -72,6 +72,7 @@
     font-size: 2rem;
     text-shadow: 8px 8px 8px gray;
     transform: rotate(45deg);
+    user-select: none;
   }
   p {
     margin-bottom: 1rem;
