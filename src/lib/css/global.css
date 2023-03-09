@@ -1,0 +1,15 @@
+main > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+body {
+  @apply text-primary-700;
+}
+
+a {
+  @apply text-interactive-600;
+  @apply decoration-dotted;
+  @apply hover:underline;
+  @apply underline-offset-4;
+}
