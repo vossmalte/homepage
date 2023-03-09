@@ -6,7 +6,7 @@
   <title>Malte Voss</title>
 </svelte:head>
 
-<div class="flex flex-col md:flex-row gap-8 m-auto items-center">
+<div class="card-container two-cols">
   <LandingCard
     backgroundPosition="98% 70%"
     backgroundSize="400%"
@@ -27,3 +27,18 @@
   </LandingCard>
   <!-- TODO: Math -->
 </div>
+
+<style>
+  .card-container {
+    margin: auto;
+    display: grid;
+    gap: 18px;
+    width: fit-content;
+    grid-template-columns: 300px;
+  }
+  @media (min-width: 768px) {
+    .two-cols {
+      grid-template-columns: 300px 300px;
+    }
+  }
+</style>
