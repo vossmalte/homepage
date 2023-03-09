@@ -9,15 +9,6 @@
   let footerheight: number;
 </script>
 
-<svelte:head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono" />
-  <style>
-    body {
-      font-family: 'IBM Plex Mono', serif;
-    }
-  </style>
-</svelte:head>
 <Header bind:headerheight />
 <div class="flex flex-row" style="min-height: calc(100vh - {headerheight}px - {footerheight}px);">
   <div class="w-0 bg-gradient-to-r from-interactive-200 to-background-50 sm:w-full" />
