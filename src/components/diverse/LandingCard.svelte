@@ -2,13 +2,11 @@
   import { onDestroy, onMount } from 'svelte';
   import { tweened } from 'svelte/motion';
 
-  let running = true;
+  let running = false;
   export let backgroundUrl = 'https://images.unsplash.com/photo-1512095662389-83dfa94f3e0b';
   export let backgroundSize = '400%';
   export let backgroundPosition = '55% 70%';
-  export let backgroundAnimation: 'horizontal' | 'vertical' = 'horizontal';
-
-  console.log(backgroundAnimation);
+  export let backgroundAnimation = 'frisbee';
 
   // this is needed as background gradients cannot be animated with CSS
   // maybe another way is: https://stackoverflow.com/questions/62135395/css-background-image-w-rotate-repeat-and-opacity
@@ -46,7 +44,7 @@
   }deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);`}
 >
   <div
-    class="inner-card h-full"
+    class="inner-card {backgroundAnimation}"
     class:horizontal={backgroundAnimation === 'horizontal'}
     class:vertical={backgroundAnimation === 'vertical'}
     style:background-image="url({backgroundUrl})"
@@ -57,7 +55,7 @@
   </div>
 </div>
 
-<style lang="postcss">
+<style>
   .card {
     width: 300px;
     height: 483px;
@@ -76,6 +74,7 @@
   }
 
   .inner-card {
+    height: 100%;
     clip-path: polygon(
       10% 0%,
       90% 0%,
@@ -93,34 +92,9 @@
     top: 65%;
     margin: auto;
     width: fit-content;
+    transition: 0.2s ease-in-out;
   }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .horizontal {
-      animation: horizontal 30s linear infinite;
-    }
-    .vertical {
-      animation: vertical 30s linear infinite;
-    }
-  }
-
-  @keyframes horizontal {
-    0% {
-      background-position-x: 0%;
-    }
-    50% {
-      background-position-x: 100%;
-    }
-    100% {
-      background-position-x: 0%;
-    }
-  }
-  @keyframes vertical {
-    0% {
-      background-position-y: 0%;
-    }
-    100% {
-      background-position-y: 100%;
-    }
+  .inner-card:hover .cta {
+    scale: 1.3;
   }
 </style>

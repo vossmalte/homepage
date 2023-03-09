@@ -1,0 +1,66 @@
+@media (prefers-reduced-motion: no-preference) {
+  .frisbee {
+    animation: frisbee 30s ease-in-out infinite alternate;
+  }
+  .programming {
+    animation: programming 33s linear infinite;
+  }
+  .math {
+    animation: math 17s ease-in infinite alternate;
+  }
+  .blog {
+    animation: blog 40s linear infinite;
+  }
+}
+
+@keyframes frisbee {
+  0% {
+    background-position-x: 0%;
+    background-size: 300%;
+  }
+  100% {
+    background-position-x: 100%;
+    background-size: 400%;
+  }
+}
+
+@keyframes programming {
+  0% {
+    background-position-y: 0%;
+  }
+  100% {
+    background-position-y: 100%;
+  }
+}
+
+@keyframes math {
+  0% {
+    background-position: 50% 89%;
+    background-size: 240%;
+  }
+  100% {
+    background-position: 48% 25%;
+    background-size: 450%;
+  }
+}
+
+@keyframes blog {
+  0% {
+    background-position: 0% 0%;
+  }
+  20% {
+    background-position: 100% 50%;
+  }
+  40% {
+    background-position: 70% 0%;
+  }
+  60% {
+    background-position: 0% 50%;
+  }
+  80% {
+    background-position: 100% 20%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
