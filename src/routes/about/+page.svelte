@@ -1,6 +1,7 @@
 <script lang="ts">
   import ObjectCard from '../../components/diverse/ObjectCard.svelte';
   import PerspectiveFollowMouse from '../../components/diverse/PerspectiveFollowMouse.svelte';
+  import ExternalLink from '../../components/ExternalLink.svelte';
 </script>
 
 <svelte:head>
@@ -13,6 +14,7 @@
     <ObjectCard name="Malte Voss">
       <ul slot="attributes">
         <li>nerd: true</li>
+        <li><ExternalLink href="https://github.com/vossmalte">github: vossmalte</ExternalLink></li>
         <li>employer: E.ON</li>
         <li>location: Karlsruhe 🇩🇪</li>
       </ul>
