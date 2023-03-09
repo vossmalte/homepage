@@ -94,6 +94,7 @@
     width: fit-content;
     transition: 0.2s ease-in-out;
   }
+
   .inner-card:hover .cta {
     scale: 1.3;
   }

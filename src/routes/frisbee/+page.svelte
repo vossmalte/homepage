@@ -74,6 +74,7 @@
     transform: rotate(45deg);
     user-select: none;
   }
+
   p {
     margin-bottom: 1rem;
   }

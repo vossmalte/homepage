@@ -1,3 +1,4 @@
+<!-- TODO: use color from color palette -->
 <svg
   version="1.1"
   id="Ebene_1"
@@ -11,25 +12,29 @@
 >
   <style type="text/css" id="style9">
     .st0 {
-      clip-path: url(#SVGID_00000154428425763001764580000013529170489090326413_);
+      clip-path: url("#SVGID_00000154428425763001764580000013529170489090326413_");
     }
+
     .st1 {
       opacity: 0.3;
-      clip-path: url(#SVGID_00000181806264517801899440000003427551043519671224_);
+      clip-path: url("#SVGID_00000181806264517801899440000003427551043519671224_");
     }
+
     .st2 {
-      clip-path: url(#SVGID_00000054240301645953612870000004429170612444970400_);
+      clip-path: url("#SVGID_00000054240301645953612870000004429170612444970400_");
       fill: #cec800;
     }
+
     .st3 {
-      clip-path: url(#SVGID_00000181806264517801899440000003427551043519671224_);
+      clip-path: url("#SVGID_00000181806264517801899440000003427551043519671224_");
       fill: none;
       stroke: #262626;
       stroke-width: 3.6;
       stroke-miterlimit: 10;
     }
+
     .st4 {
-      clip-path: url(#SVGID_00000016055078530229926570000017952359046432441518_);
+      clip-path: url("#SVGID_00000016055078530229926570000017952359046432441518_");
       fill: none;
       stroke: #262626;
       stroke-width: 3;
@@ -146,6 +151,7 @@
     animation: draw 15s ease;
     animation-fill-mode: forwards;
   }
+
   #path45:hover {
     color: blue;
   }

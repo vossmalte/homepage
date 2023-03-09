@@ -12,6 +12,7 @@
     width: 100%;
     z-index: 99;
     justify-items: center;
+
     @apply bg-background-400;
     @apply text-primary-700;
   }

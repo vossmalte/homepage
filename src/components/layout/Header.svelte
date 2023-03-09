@@ -17,26 +17,33 @@
     z-index: 99;
     top: 0;
     width: 100%;
+
     @apply bg-background-300;
+
     padding: 4px;
     display: flex;
     justify-content: right;
     align-items: flex-end;
   }
+
   nav {
     justify-self: right;
     align-items: center;
     height: 2rem;
   }
+
   a {
-    font-size: 1rem;
     @apply text-primary-600;
+
+    font-size: 1rem;
     text-decoration-line: none;
     position: relative;
   }
+
   a:hover {
     @apply animate-pulse;
   }
+
   a:hover::after {
     content: '';
     position: absolute;

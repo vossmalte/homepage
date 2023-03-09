@@ -48,16 +48,19 @@
     margin-bottom: 1rem;
     writing-mode: sideways-lr;
   }
+
   @media (prefers-reduced-motion: no-preference) {
     .blink {
       opacity: 0;
       animation: blink 1s steps(2, jump-none) 1s infinite;
     }
   }
+
   @keyframes blink {
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }

@@ -21,6 +21,3 @@
   <div class="w-0 bg-gradient-to-r from-background-50 to-secondary-200 sm:w-full" />
 </div>
 <Footer bind:footerheight />
-
-<style global>
-</style>

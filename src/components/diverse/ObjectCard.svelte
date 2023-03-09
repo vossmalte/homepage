@@ -20,14 +20,17 @@
     flex-direction: column;
     width: fit-content;
   }
+
   .name {
     display: flex;
     justify-content: center;
   }
+
   .attributes {
     border-bottom: 1px solid black;
     border-top: 1px solid black;
   }
+
   .card > div {
     padding: 0 4px;
     min-height: 4px;

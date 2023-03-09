@@ -36,6 +36,7 @@
     width: fit-content;
     transition: 0.2s ease-in-out;
   }
+
   div:hover {
     scale: 1.1;
   }

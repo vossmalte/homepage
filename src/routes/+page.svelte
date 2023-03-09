@@ -50,9 +50,11 @@
     width: fit-content;
     grid-template-columns: 300px;
   }
+
   div a {
     scale: 1.1;
   }
+
   @media (min-width: 768px) {
     .two-cols {
       grid-template-columns: 300px 300px;
