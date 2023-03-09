@@ -1,7 +1,7 @@
 <svelte:head>
   <title>Malte @ Programming</title>
 </svelte:head>
-<h1>Programming</h1>
+<h1>Programming<span class="blink">_</span></h1>
 <article>
   <p>
     My first experience with a terminal was on Windows when I started exploring batch scripting. In
@@ -47,5 +47,19 @@
   p {
     margin-bottom: 1rem;
     writing-mode: sideways-lr;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .blink {
+      opacity: 0;
+      animation: blink 1s steps(2, jump-none) 1s infinite;
+    }
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>
