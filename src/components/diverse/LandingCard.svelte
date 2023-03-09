@@ -10,17 +10,25 @@
 
   console.log(backgroundAnimation);
 
+  // this is needed as background gradients cannot be animated with CSS
+  // maybe another way is: https://stackoverflow.com/questions/62135395/css-background-image-w-rotate-repeat-and-opacity
   export const rotation = tweened(Math.random() * 360, {
     duration: 4000
   });
-  async function startDegrees() {
-    await rotation.set(0, { duration: 0 });
-    await rotation.set(360);
-    if (!running) return;
-    await startDegrees();
+
+  $: {
+    while (running) {
+      running = false;
+      rotation.set(0, { duration: 0 });
+      rotation.set(360).then(() => {
+        running = true;
+      });
+    }
   }
 
-  onMount(() => startDegrees());
+  onMount(() => {
+    running = true;
+  });
 
   onDestroy(() => {
     running = false;
