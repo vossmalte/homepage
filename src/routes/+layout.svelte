@@ -13,7 +13,7 @@
 <div class="flex flex-row" style="min-height: calc(100vh - {headerheight}px - {footerheight}px);">
   <div class="w-0 bg-gradient-to-r from-interactive-200 to-background-50 sm:w-full" />
   <main
-    class="p-4 bg-background-50 max-w-5xl w-full sm:min-w-[620px]"
+    class="w-full max-w-5xl bg-background-50 p-4 sm:min-w-[620px]"
     style:padding-bottom="{footerheight + 8}px"
   >
     <slot />
