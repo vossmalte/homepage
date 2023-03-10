@@ -71,6 +71,11 @@
       0% 6.21%
     );
     padding: 4px;
+    transition: 2s ease-in;
+  }
+
+  .card:hover {
+    padding: 16px;
   }
 
   .inner-card {
