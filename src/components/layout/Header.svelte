@@ -5,8 +5,6 @@
 <header bind:clientHeight={headerheight}>
   <nav>
     <a href="/">Home</a>
-    <a href="/frisbee">Frisbee</a>
-    <a href="/programming">Programming</a>
     <a href="/about">About</a>
   </nav>
 </header>
