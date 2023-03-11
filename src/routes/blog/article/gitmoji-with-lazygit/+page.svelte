@@ -3,6 +3,11 @@
 </script>
 
 <h1>Using gitmoji-cli from within lazygit</h1>
+
+<svelte:head>
+  <title>Using gitmoji with lazygit | Malte's Blog</title>
+</svelte:head>
+
 <article>
   <p>
     <ExternalLink href="https://gitmoji.dev/">Gitmoji</ExternalLink> is a powerful tool to enhance documentation
