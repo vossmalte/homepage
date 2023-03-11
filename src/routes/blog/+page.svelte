@@ -11,10 +11,10 @@
 <style>
   ul {
     gap: 1rem;
-    list-style-type: '\1F4DD';  
+    list-style: '\1F4DD  'inside;
   }
   li {
-      margin-bottom: 1rem;
-      padding-left: 4px;
-    }
+    margin-bottom: 1rem;
+    padding-left: 4px;
+  }
 </style>
