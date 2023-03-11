@@ -38,7 +38,7 @@
     backgroundUrl="https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8"
     backgroundAnimation="blog"
   >
-    <a class="rounded-2xl bg-primary-700 p-4 text-primary-100" href="/math">Blog</a>
+    <a class="rounded-2xl bg-primary-700 p-4 text-primary-100" href="/blog">Blog</a>
   </LandingCard>
 </div>
 
