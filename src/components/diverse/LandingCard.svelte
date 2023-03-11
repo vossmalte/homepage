@@ -3,6 +3,7 @@
   import { tweened } from 'svelte/motion';
 
   let running = false;
+
   export let backgroundUrl = 'https://images.unsplash.com/photo-1512095662389-83dfa94f3e0b';
   export let backgroundSize = '400%';
   export let backgroundPosition = '55% 70%';
@@ -45,8 +46,6 @@
 >
   <div
     class="inner-card {backgroundAnimation}"
-    class:horizontal={backgroundAnimation === 'horizontal'}
-    class:vertical={backgroundAnimation === 'vertical'}
     style:background-image="url({backgroundUrl})"
     style:background-size={backgroundSize}
     style:background-position={backgroundPosition}
@@ -71,7 +70,7 @@
       0% 6.21%
     );
     padding: 4px;
-    transition: 2s ease-in;
+    transition: 1s ease-in;
   }
 
   .card:hover {
