@@ -148,8 +148,7 @@
   #path45 {
     stroke-dasharray: 5448;
     stroke-dashoffset: 5448;
-    animation: draw 15s ease;
-    animation-fill-mode: forwards;
+    animation: draw 15s ease 0.5s forwards;
   }
 
   #path45:hover {
