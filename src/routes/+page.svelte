@@ -11,7 +11,7 @@
   <LandingCard
     backgroundPosition="98% 70%"
     backgroundSize="400%"
-    backgroundUrl="https://images.unsplash.com/photo-1512095662389-83dfa94f3e0b"
+    backgroundUrl="/landingcard/frisbee.webp"
     backgroundAnimation="frisbee"
   >
     <a class="rounded-2xl bg-primary-300 p-4 text-primary-700" href="/frisbee">Frisbee</a>
@@ -27,7 +27,7 @@
     >
   </LandingCard>
   <LandingCard
-    backgroundUrl="https://images.unsplash.com/photo-1546833998-877b37c2e5c6"
+    backgroundUrl="/landingcard/math.webp"
     backgroundAnimation="math"
     backgroundSize="240%"
     backgroundPosition="50% 70%"
@@ -35,7 +35,7 @@
     <a class="rounded-2xl bg-interactive-300 p-4 text-primary-900" href="/math">Math</a>
   </LandingCard>
   <LandingCard
-    backgroundUrl="https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8"
+    backgroundUrl="/landingcard/blog.webp"
     backgroundAnimation="blog"
   >
     <a class="rounded-2xl bg-primary-700 p-4 text-primary-100" href="/blog">Blog</a>
