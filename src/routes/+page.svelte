@@ -17,7 +17,7 @@
     <a class="rounded-2xl bg-primary-300 p-4 text-primary-700" href="/frisbee">Frisbee</a>
   </LandingCard>
   <LandingCard
-    backgroundUrl="https://steamuserimages-a.akamaihd.net/ugc/99477156185734595/177E7FD6085414F203634D4F96DE1F8B13F78B6F/"
+    backgroundUrl="/landingcard/programming.webp"
     backgroundAnimation="programming"
     backgroundSize="500%"
     backgroundPosition="50% 70%"
