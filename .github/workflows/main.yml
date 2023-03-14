@@ -20,9 +20,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: nikeee/setup-pandoc@v1
-    - run: cd src && gh repo clone vossmalte/blog
-    - run: cd blog && mkdir output
-    - run: find ./ -iname "*.md" -type f -exec sh -c 'pandoc "${0}" -o "./output/$(basename ${0%.md}.html)"' {} \;
+    - run: cd src && gh repo clone vossmalte/blog && mkdir blog/output
+    - run: cd src/blog && find ./ -iname "*.md" -type f -exec sh -c 'pandoc "${0}" -o "./output/$(basename ${0%.md}.html)"' {} \;
     - name: Use Node.js 18.x
       uses: actions/setup-node@v3
       with:
