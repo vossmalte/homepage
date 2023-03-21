@@ -2,11 +2,10 @@
   import '../lib/css/tailwind.css';
   import '../lib/css/css-reset.css';
   import '../lib/css/global.css';
-  import Footer from '../components/layout/Footer.svelte';
   import Header from '../components/layout/Header.svelte';
 
   let headerheight: number;
-  let footerheight: number;
+  let footerheight: number = 0;
 </script>
 
 <Header bind:headerheight />
@@ -20,4 +19,3 @@
   </main>
   <div class="w-0 bg-gradient-to-r from-background-50 to-secondary-200 sm:w-full" />
 </div>
-<Footer bind:footerheight />
