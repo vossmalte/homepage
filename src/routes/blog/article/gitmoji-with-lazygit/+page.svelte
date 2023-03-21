@@ -52,7 +52,7 @@
     command: 'gitmoji -c'
     context: 'files'
     subprocess: yes
-    description: 'Commit with gitmoji
+    description: 'Commit with gitmoji'
     stream: yes
     showOutput: yes
 </samp></pre>
