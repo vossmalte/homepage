@@ -9,26 +9,31 @@
 </svelte:head>
 
 <h1>About me</h1>
-<p class="m-auto w-fit">
-  <PerspectiveFollowMouse sensitivity={30}>
-    <ObjectCard name="Malte Voss">
-      <ul slot="attributes">
-        <li>nerd: true</li>
-        <li><ExternalLink href="https://github.com/vossmalte">github: vossmalte</ExternalLink></li>
-        <li>employer: E.ON</li>
-        <li>location: Karlsruhe 🇩🇪</li>
-      </ul>
-      <ul slot="methods">
-        <li><a href="/programming">writeCode()</a></li>
-        <li>reviewCode()</li>
-        <li><a href="/frisbee">playFrisbee()</a></li>
-        <li>learn()</li>
-      </ul>
-    </ObjectCard>
-  </PerspectiveFollowMouse>
-</p>
+<PerspectiveFollowMouse sensitivity={30}>
+  <ObjectCard name="Malte Voss">
+    <ul slot="attributes">
+      <li>nerd: true</li>
+      <li>
+        <ExternalLink href="https://github.com/vossmalte">github: vossmalte</ExternalLink>
+      </li>
+      <li>employer: E.ON</li>
+      <li>location: Karlsruhe 🇩🇪</li>
+    </ul>
+    <ul slot="methods">
+      <li><a href="/programming">writeCode()</a></li>
+      <li>reviewCode()</li>
+      <li><a href="/frisbee">playFrisbee()</a></li>
+      <li>learn()</li>
+    </ul>
+  </ObjectCard>
+</PerspectiveFollowMouse>
+<div class="spacer" />
+<a class="bottom" href="/impressum">Impressum</a>
 
 <style>
+  .spacer {
+    height: 20px;
+  }
   li:hover {
     font-weight: 700;
   }
