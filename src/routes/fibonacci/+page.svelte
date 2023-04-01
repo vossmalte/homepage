@@ -1,19 +1,31 @@
 <script>
-  import FibSquare from '../../components/fibonacci/FibSquare.svelte';
+  import Fibonacci from '../../components/fibonacci/Fibonacci.svelte';
 
-  let n = 8;
+  //     style:transform="scale({20 / Math.pow(1.5, n)})"
+
+  let n = 1;
+  let clientWidth;
 </script>
 
 <h1>Fibonacci with TanStack Query</h1>
-<label><input type="range" step="1" bind:value={n} min="1" max="50" />{n}</label>
-<div style:transform="scale({20/Math.pow(1.5,n)})">
-  {#key n}
-    <FibSquare {n} />
-  {/key}
+<label>
+  <button on:click={() => (n = Math.min(n + 1, 30))} class="animate-bounce bg-interactive-200"
+    >+1</button
+  ><input type="range" step="1" bind:value={n} min="1" max="30" />{n}</label
+>
+<div class="outer" bind:clientWidth>
+  <Fibonacci {n} {clientWidth} />
 </div>
 
 <style>
-  div {
-    transform-origin: 0 0;
+  .outer {
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+  }
+  label {
+    display: flex;
+    gap: 4px;
+    margin: 8px 0;
   }
 </style>
