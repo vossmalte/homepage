@@ -7,7 +7,7 @@
   <title>Malte Voss</title>
 </svelte:head>
 
-<div class="card-container two-cols">
+<nav class="card-container two-cols">
   <LandingCard
     backgroundPosition="98% 70%"
     backgroundSize="400%"
@@ -40,7 +40,7 @@
   >
     <a class="rounded-2xl bg-primary-700 p-4 text-primary-100" href="/blog">Blog</a>
   </LandingCard>
-</div>
+</nav>
 
 <style>
   .card-container {
