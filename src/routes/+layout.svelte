@@ -5,7 +5,7 @@
   import Header from '../components/layout/Header.svelte';
 
   let headerheight: number;
-  let footerheight: number = 0;
+  let footerheight = 0;
 </script>
 
 <Header bind:headerheight />

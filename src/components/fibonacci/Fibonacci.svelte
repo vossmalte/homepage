@@ -1,10 +1,5 @@
 <script lang="ts">
-  import {
-    QueryClientProvider,
-    QueryClient,
-    createQueries,
-    createQuery
-  } from '@tanstack/svelte-query';
+  import { QueryClientProvider, QueryClient } from '@tanstack/svelte-query';
   import FibSquare from './FibSquare.svelte';
 
   export let n: number;
@@ -35,7 +30,7 @@
 </script>
 
 <QueryClientProvider {client}>
-  <div class="inner" style:transform={`scale(${clientWidth / fib(n + 1)/10})`}>
+  <div class="inner" style:transform={`scale(${clientWidth / fib(n + 1) / 10})`}>
     {#key n}
       <FibSquare {n} />
     {/key}

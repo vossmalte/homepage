@@ -34,10 +34,7 @@
   >
     <a class="rounded-2xl bg-interactive-300 p-4 text-primary-900" href="/math">Math</a>
   </LandingCard>
-  <LandingCard
-    backgroundUrl="/landingcard/blog.webp"
-    backgroundAnimation="blog"
-  >
+  <LandingCard backgroundUrl="/landingcard/blog.webp" backgroundAnimation="blog">
     <a class="rounded-2xl bg-primary-700 p-4 text-primary-100" href="/blog">Blog</a>
   </LandingCard>
 </nav>

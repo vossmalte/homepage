@@ -87,6 +87,6 @@
     list-style: disc inside;
   }
   pre {
-      white-space: pre-wrap;
-    }
+    white-space: pre-wrap;
+  }
 </style>

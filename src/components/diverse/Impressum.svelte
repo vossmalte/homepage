@@ -14,16 +14,18 @@
   <p>6 8 &nbsp; a l r h</p>
 </div>
 
-
 <h2>Haftungshinweis</h2>
 
-<p>Ich übernehme keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+<p>
+  Ich übernehme keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten
+  sind ausschließlich deren Betreiber verantwortlich.
+</p>
 
 <style>
   div + div {
     translate: 1ch -100%;
   }
   h2 {
-      font-weight: 1000;
-    }
+    font-weight: 1000;
+  }
 </style>

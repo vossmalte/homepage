@@ -4,7 +4,8 @@ pre {
   @apply bg-interactive-200;
 }
 
-article p, article pre {
+article p,
+article pre {
   margin-bottom: 1rem;
 }
 
