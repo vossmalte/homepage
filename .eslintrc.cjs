@@ -7,12 +7,12 @@ module.exports = {
     'plugin:unicorn/all',
     'prettier'
   ],
-  plugins: ['svelte3', '@typescript-eslint', 'unicorn'],
+  plugins: ['svelte', '@typescript-eslint', 'unicorn'],
   ignorePatterns: ['*.cjs'],
-  overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
-  settings: {
-    'svelte3/typescript': () => require('typescript')
-  },
+  overrides: [{ files: ['*.svelte'], processor: 'svelte/svelte' }],
+  // settings: {
+  // 'svelte/typescript': () => require('typescript')
+  // },
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2020
