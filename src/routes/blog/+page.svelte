@@ -11,7 +11,7 @@
 <style>
   ul {
     gap: 1rem;
-    list-style: '\1F4DD  'inside;
+    list-style: '\1F4DD  ' inside;
   }
   li {
     margin-bottom: 1rem;
