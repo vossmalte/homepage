@@ -34,6 +34,7 @@
   draggable="false"
   on:mouseover={() => rotation.set(0)}
   on:focus={() => rotation.set(0)}
+  role="presentation"
   style="top: {$position.y - clientHeight / 2}px; left: {$position.x -
     clientWidth / 2}px; transform: rotate({$rotation}rad);"
 >
