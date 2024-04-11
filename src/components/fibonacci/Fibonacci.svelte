@@ -15,8 +15,8 @@
       queryFn: async ({ queryKey }) => {
         let n = queryKey[1] as number;
         if (n < 1) return 0;
-        let n1: number = await client.ensureQueryData(['fib', n - 1]);
-        let n2: number = await client.ensureQueryData(['fib', n - 2]);
+        let n1: number = await client.ensureQueryData({ queryKey: ['fib', n - 1] });
+        let n2: number = await client.ensureQueryData({ queryKey: ['fib', n - 2] });
         // return new Promise((resolve) => setTimeout(resolve, 1000)).then(() => n1 + n2);
         return n1 + n2;
       },
