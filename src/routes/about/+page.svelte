@@ -5,12 +5,12 @@
 </script>
 
 <svelte:head>
-  <title>Malte Voss</title>
+  <title>Malte Breitzmann</title>
 </svelte:head>
 
 <h1>About me</h1>
 <PerspectiveFollowMouse sensitivity={30}>
-  <ObjectCard name="Malte Voss">
+  <ObjectCard name="Malte Breitzmann">
     <ul slot="attributes">
       <li>nerd: true</li>
       <li>

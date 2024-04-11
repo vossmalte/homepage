@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>Malte Voss | Web Developer, Mathematician, Frisbee Enthusiast | Tech Blog</title>
+  <title>Malte Breitzmann | Web Developer, Mathematician, Frisbee Enthusiast | Tech Blog</title>
 </svelte:head>
 
 <nav class="card-container two-cols">
