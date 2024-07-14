@@ -46,7 +46,6 @@
 <style>
   p {
     margin-bottom: 1rem;
-    writing-mode: sideways-lr;
   }
 
   @media (prefers-reduced-motion: no-preference) {
