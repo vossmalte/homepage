@@ -40,7 +40,8 @@
       linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
   }
 
-  .hue-rotate:hover {
+  .hue-rotate:hover,
+  .hue-rotate:focus-within {
     padding: 16px;
   }
 
@@ -77,7 +78,8 @@
     );
     transition: backdrop-filter 1s ease-in;
   }
-  .blurry:hover {
+  .blurry:hover,
+  .blurry:focus-within {
     backdrop-filter: blur(0px);
   }
 
@@ -103,7 +105,8 @@
     transition: 0.2s ease-in-out;
   }
 
-  .inner-card:hover .cta {
+  .inner-card:hover .cta,
+  .inner-card:focus-within .cta {
     scale: 1.3;
   }
 
