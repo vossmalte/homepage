@@ -40,7 +40,7 @@
       Learning about a new problem and developing tools to tackle it. I love the story about <ExternalLink
         href="https://en.wikipedia.org/wiki/Grigori_Perelman">Grigori Perelman</ExternalLink
       > who solved the only Millenium problem to date. It took researchers three years to verify his
-      prove...
+      proof...
     </li>
     <li class="merge">
       Combining two topics, e.g. try calculating ln(i) with your knowledge from analysis and complex
