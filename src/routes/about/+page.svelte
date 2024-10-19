@@ -27,7 +27,7 @@
     </ul>
   </ObjectCard>
 </PerspectiveFollowMouse>
-<div class="spacer" />
+<div class="spacer"></div>
 <a class="bottom" href="/impressum">Impressum</a>
 
 <style>

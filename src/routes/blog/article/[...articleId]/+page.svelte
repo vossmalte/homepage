@@ -17,6 +17,8 @@
         day: 'numeric'
       })}
   </span>
+  <!-- this does not lead to CSS attacks as the data is gathered at compile time -->
+  <!-- eslint-disable-next-line svelte/no-at-html-tags -->
   {@html data.articleHtml}
 </article>
 
