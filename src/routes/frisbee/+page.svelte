@@ -34,9 +34,9 @@
   I started playing <ExternalLink href="https://wfdf.sport/disciplines/ultimate"
     >Ultimate Frisbee</ExternalLink
   > when I was 14 years old. Since then, I have participated in over a hundred tournaments. The community
-  is my favorite part of playing Ultimate. There are many magnificent players that I always admired.
-  They put a lot of effort and passion into growing the sport, their team and individual players. I am
-  privileged to have played with these people.
+  is my favorite part of playing Ultimate. There are many magnificent players that I always admired. They
+  put a lot of effort and passion into growing the sport, their team and individual players. I am privileged
+  to have played with these people.
 </p>
 <p>
   I achieved my biggest successes with my <ExternalLink href="https://ultimatekarlsruhe.de"

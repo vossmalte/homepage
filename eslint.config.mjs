@@ -1,71 +1,42 @@
-import svelte from 'eslint-plugin-svelte';
-import svelteParser from 'svelte-eslint-parser';
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
-import unicorn from 'eslint-plugin-unicorn';
-import globals from 'globals';
-import tsParser from '@typescript-eslint/parser';
-import path from 'node:path';
+import prettier from 'eslint-config-prettier';
 import { fileURLToPath } from 'node:url';
+import { includeIgnoreFile } from '@eslint/compat';
 import js from '@eslint/js';
-import { FlatCompat } from '@eslint/eslintrc';
+import svelte from 'eslint-plugin-svelte';
+import { defineConfig } from 'eslint/config';
+import globals from 'globals';
+import ts from 'typescript-eslint';
+import unicorn from 'eslint-plugin-unicorn';
+import svelteConfig from './svelte.config.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all
-});
+const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
 
-export default [
+export default defineConfig(
+  includeIgnoreFile(gitignorePath),
+  js.configs.recommended,
+  ...ts.configs.recommended,
+  ...svelte.configs.recommended,
+  unicorn.configs['flat/recommended'],
+  prettier,
+  ...svelte.configs.prettier,
   {
-    ignores: [
-      '**/*.cjs',
-      '**/.DS_Store',
-      '**/node_modules',
-      'build',
-      '.svelte-kit',
-      'package',
-      '**/.env',
-      '**/.env.*',
-      '!**/.env.example',
-      '**/pnpm-lock.yaml',
-      '**/package-lock.json',
-      '**/yarn.lock'
-    ]
-  },
-  ...compat.extends(
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:unicorn/all',
-    'prettier',
-    'plugin:svelte/recommended'
-  ),
-  {
-    plugins: {
-      svelte,
-      '@typescript-eslint': typescriptEslint,
-      unicorn
-    },
+    languageOptions: { globals: { ...globals.browser, ...globals.node } },
 
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node
-      },
-
-      parser: tsParser,
-      ecmaVersion: 2020,
-      sourceType: 'module'
+    rules: {
+      // typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.
+      // see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+      'no-undef': 'off'
     }
   },
   {
-    files: ['**/*.svelte'],
-    processor: 'svelte/svelte',
+    files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
+
     languageOptions: {
-      parser: svelteParser,
       parserOptions: {
-        parser: tsParser
+        projectService: true,
+        extraFileExtensions: ['.svelte'],
+        parser: ts.parser,
+        svelteConfig
       }
     }
   },
@@ -82,4 +53,4 @@ export default [
       ]
     }
   }
-];
+);

@@ -13,10 +13,10 @@
     count - this is already a powerful tool. About 50'000 years ago mankind started using <ExternalLink
       href="https://bar.wikipedia.org/wiki/Keabhoiz">tally sticks</ExternalLink
     > to count. It uses a principle that is still useful today: the bijection. A bijection puts to sets
-    into relation by uniquely assigning each element from one set to an element of the other set. If
-    you count your sheep using a tally stick, each sheep is assigned to a notch - and vice-versa: each
-    notch is assigned to a sheep. Counting in your head applies the same principle: each sheep is assigned
-    a unique number - the numbers itself are a new concept on their own. Since there is a bijection between
+    into relation by uniquely assigning each element from one set to an element of the other set. If you
+    count your sheep using a tally stick, each sheep is assigned to a notch - and vice-versa: each notch
+    is assigned to a sheep. Counting in your head applies the same principle: each sheep is assigned a
+    unique number - the numbers itself are a new concept on their own. Since there is a bijection between
     the set of sheep and notches (or numbers), both have the same size (<i>number</i> of elements). When
     counting, the last number uttered coincides with size of the set. This is a very practical coincidence
     that only works when working with bijections where one set are the natural numbers (a finite subset
@@ -39,8 +39,7 @@
     <li class="new">
       Learning about a new problem and developing tools to tackle it. I love the story about <ExternalLink
         href="https://en.wikipedia.org/wiki/Grigori_Perelman">Grigori Perelman</ExternalLink
-      > who solved the only Millenium problem to date. It took researchers three years to verify his
-      proof...
+      > who solved the only Millenium problem to date. It took researchers three years to verify his proof...
     </li>
     <li class="merge">
       Combining two topics, e.g. try calculating ln(i) with your knowledge from analysis and complex
