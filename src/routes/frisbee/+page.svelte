@@ -73,6 +73,8 @@
     text-shadow: 8px 8px 8px gray;
     transform: rotate(45deg);
     user-select: none;
+    background: none;
+    border: 0;
   }
 
   p {

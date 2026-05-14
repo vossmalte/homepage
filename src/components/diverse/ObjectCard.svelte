@@ -3,7 +3,7 @@
 </script>
 
 <div class="card">
-  <h1 class="name">{name}</h1>
+  <span class="name">{name}</span>
   <div class="attributes">
     <slot name="attributes" />
   </div>

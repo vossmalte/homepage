@@ -30,9 +30,9 @@
   <slot />
 </div>
 
-<style lang="postcss">
+<style>
   div {
-    box-shadow: 8px 8px 8px theme(colors.primary.500);
+    box-shadow: 8px 8px 8px var(--color-primary-500);
     width: fit-content;
     transition: 0.2s ease-in-out;
   }

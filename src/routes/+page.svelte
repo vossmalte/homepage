@@ -14,7 +14,7 @@
     backgroundUrl="/landingcard/frisbee.webp"
     backgroundAnimation="frisbee"
   >
-    <a class="rounded-2xl bg-primary-300 p-4 text-primary-700" href="/frisbee">Frisbee</a>
+    <a class="card-frisbee" href="/frisbee">Frisbee</a>
   </LandingCard>
   <LandingCard
     backgroundUrl="/landingcard/programming.webp"
@@ -22,9 +22,7 @@
     backgroundSize="500%"
     backgroundPosition="50% 70%"
   >
-    <a class="rounded-2xl bg-background-500 p-4 text-interactive-50" href="/programming"
-      >Programming</a
-    >
+    <a class="card-programming" href="/programming">Programming</a>
   </LandingCard>
   <LandingCard
     backgroundUrl="/landingcard/math.webp"
@@ -32,10 +30,10 @@
     backgroundSize="240%"
     backgroundPosition="50% 70%"
   >
-    <a class="rounded-2xl bg-interactive-300 p-4 text-primary-900" href="/math">Math</a>
+    <a class="card-math" href="/math">Math</a>
   </LandingCard>
   <LandingCard backgroundUrl="/landingcard/blog.webp" backgroundAnimation="blog">
-    <a class="rounded-2xl bg-primary-700 p-4 text-primary-100" href="/blog">Blog</a>
+    <a class="card-blog" href="/blog">Blog</a>
   </LandingCard>
 </nav>
 
@@ -52,5 +50,33 @@
     .two-cols {
       grid-template-columns: 300px 300px;
     }
+  }
+
+  .card-frisbee {
+    background-color: var(--color-primary-300);
+    color: var(--color-primary-700);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .card-programming {
+    background-color: var(--color-background-500);
+    color: var(--color-interactive-50);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .card-math {
+    background-color: var(--color-interactive-300);
+    color: var(--color-primary-900);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .card-blog {
+    background-color: var(--color-primary-700);
+    color: var(--color-primary-100);
+    border-radius: 1rem;
+    padding: 1rem;
   }
 </style>

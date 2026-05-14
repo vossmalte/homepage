@@ -1,5 +1,5 @@
 <script lang="ts">
-  import '../lib/css/tailwind.css';
+  import '../lib/css/variables.css';
   import '../lib/css/css-reset.css';
   import '../lib/css/global.css';
   import Header from '../components/layout/Header.svelte';
@@ -9,13 +9,46 @@
 </script>
 
 <Header bind:headerheight />
-<div class="flex flex-row" style="min-height: calc(100vh - {headerheight}px - {footerheight}px);">
-  <div class="w-0 bg-gradient-to-r from-interactive-200 to-background-50 sm:w-full"></div>
-  <main
-    class="w-full max-w-5xl bg-background-50 p-4 sm:min-w-[620px]"
-    style:padding-bottom="{footerheight + 8}px"
-  >
+<div class="layout-row" style="min-height: calc(100vh - {headerheight}px - {footerheight}px);">
+  <div class="sidebar-left"></div>
+  <main class="content" style:padding-bottom="{footerheight + 8}px">
     <slot />
   </main>
-  <div class="w-0 bg-gradient-to-r from-background-50 to-secondary-200 sm:w-full"></div>
+  <div class="sidebar-right"></div>
 </div>
+
+<style>
+  .layout-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sidebar-left {
+    width: 0;
+    background: linear-gradient(to right, var(--color-interactive-200), var(--color-background-50));
+  }
+
+  .sidebar-right {
+    width: 0;
+    background: linear-gradient(to right, var(--color-background-50), var(--color-secondary-200));
+  }
+
+  main.content {
+    width: 100%;
+    max-width: 64rem;
+    background-color: var(--color-background-50);
+    padding: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .sidebar-left {
+      width: 100%;
+    }
+    .sidebar-right {
+      width: 100%;
+    }
+    main.content {
+      min-width: 620px;
+    }
+  }
+</style>

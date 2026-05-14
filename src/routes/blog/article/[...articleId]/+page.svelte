@@ -5,11 +5,11 @@
 </script>
 
 <svelte:head>
-  <title>{data.attributes?.title} | Malte's Blog</title>
+  <title>{data.attributes?.title} by Malte's Blog</title>
 </svelte:head>
 
 <article>
-  <span class="text-xs text-secondary-500">
+  <span class="article-date">
     {data.attributes?.createdAt &&
       new Date(data.attributes.createdAt).toLocaleString('en-GB', {
         year: 'numeric',
@@ -22,47 +22,55 @@
   {@html data.articleHtml}
 </article>
 
-<style lang="postcss" global>
-  h1,
-  h2,
-  h3 {
-    font-weight: 700;
-  }
+<style global>
+  article :global {
+    h1,
+    h2,
+    h3 {
+      font-weight: 700;
+    }
 
-  h1 {
-    font-size: 2rem;
-  }
+    h1 {
+      font-size: 2rem;
+    }
 
-  h2 {
-    font-size: 1.5rem;
-  }
+    h2 {
+      font-size: 1.5rem;
+    }
 
-  pre {
-    border-radius: 0.5rem;
+    pre {
+      border-radius: 0.5rem;
 
-    @apply bg-interactive-200;
-  }
+      background-color: var(--color-interactive-200);
+    }
 
-  article p,
-  article pre {
-    margin-bottom: 1rem;
-  }
+    p,
+    pre {
+      margin-bottom: 1rem;
+    }
 
-  pre code {
-    font-size: 0.9rem;
-    background-color: transparent;
-  }
+    pre code {
+      font-size: 0.9rem;
+      background-color: transparent;
+    }
 
-  code {
-    padding: 0 0.25rem;
-    border-radius: 0.25rem;
+    code {
+      padding: 0 0.25rem;
+      border-radius: 0.25rem;
 
-    @apply bg-interactive-100;
-  }
-  ul {
-    list-style: disc inside;
-  }
-  pre {
-    white-space: pre-wrap;
+      background-color: var(--color-interactive-100);
+    }
+    ul {
+      list-style: disc inside;
+    }
+    pre {
+      white-space: pre-wrap;
+    }
+
+    .article-date {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      color: var(--color-secondary-500);
+    }
   }
 </style>
