@@ -10,27 +10,35 @@
 
   let flexDirection = $derived.by(() => {
     switch (n % 4) {
-      case 0:
+      case 0: {
         return 'column';
-      case 1:
+      }
+      case 1: {
         return 'row';
-      case 2:
+      }
+      case 2: {
         return 'column-reverse';
-      default:
+      }
+      default: {
         return 'row-reverse';
+      }
     }
   });
 
   let backgroundColor = $derived.by(() => {
     switch (n % 4) {
-      case 0:
+      case 0: {
         return 'red';
-      case 1:
+      }
+      case 1: {
         return 'green';
-      case 2:
+      }
+      case 2: {
         return 'yellow';
-      default:
+      }
+      default: {
         return 'blue';
+      }
     }
   });
 
