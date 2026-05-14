@@ -2,8 +2,7 @@
   import { QueryClientProvider, QueryClient } from '@tanstack/svelte-query';
   import FibSquare from './FibSquare.svelte';
 
-  export let n: number;
-  export let clientWidth = 300;
+  let { n, clientWidth = 300 }: { n: number; clientWidth?: number } = $props();
 
   let client = new QueryClient();
 

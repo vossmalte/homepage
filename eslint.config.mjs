@@ -41,6 +41,13 @@ export default defineConfig(
     }
   },
   {
+    // .d.ts ambient declaration files use `export {}` to become modules — this is idiomatic TS
+    files: ['**/*.d.ts'],
+    rules: {
+      'unicorn/require-module-specifiers': 'off'
+    }
+  },
+  {
     rules: {
       'unicorn/filename-case': [
         'error',
