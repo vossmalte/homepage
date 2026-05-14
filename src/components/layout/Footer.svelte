@@ -13,7 +13,7 @@
     z-index: 99;
     justify-items: center;
 
-    @apply bg-background-400;
-    @apply text-primary-700;
+    background-color: var(--color-background-400);
+    color: var(--color-primary-700);
   }
 </style>

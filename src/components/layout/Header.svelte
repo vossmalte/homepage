@@ -15,8 +15,7 @@
     z-index: 99;
     top: 0;
     width: 100%;
-
-    @apply bg-background-300;
+    background-color: var(--color-background-300);
 
     padding: 4px;
     display: flex;
@@ -31,7 +30,7 @@
   }
 
   a {
-    @apply text-primary-600;
+    color: var(--color-primary-600);
 
     font-size: 1rem;
     text-decoration-line: none;
@@ -39,7 +38,7 @@
   }
 
   a:hover {
-    @apply animate-pulse;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   a:hover::after {
@@ -53,9 +52,16 @@
     border-radius: 2px;
     background: linear-gradient(
       111.3deg,
-      theme(colors.primary.400),
+      var(--color-primary-400),
       9.6%,
-      theme(colors.interactive.400) 93.6%
+      var(--color-interactive-400) 93.6%
     );
+  }
+</style>
+
+<style>
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
   }
 </style>

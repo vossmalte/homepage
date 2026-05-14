@@ -4,12 +4,15 @@ main > h1 {
 }
 
 body {
-  @apply text-primary-700;
+  color: var(--color-primary-700);
 }
 
 a {
-  @apply text-interactive-600;
-  @apply decoration-dotted;
-  @apply hover:underline;
-  @apply underline-offset-4;
+  color: var(--color-interactive-600);
+  text-decoration-style: dotted;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration-line: underline;
 }

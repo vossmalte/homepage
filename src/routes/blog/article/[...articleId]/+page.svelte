@@ -9,7 +9,7 @@
 </svelte:head>
 
 <article>
-  <span class="text-xs text-secondary-500">
+  <span class="article-date">
     {data.attributes?.createdAt &&
       new Date(data.attributes.createdAt).toLocaleString('en-GB', {
         year: 'numeric',
@@ -40,7 +40,7 @@
   pre {
     border-radius: 0.5rem;
 
-    @apply bg-interactive-200;
+    background-color: var(--color-interactive-200);
   }
 
   article p,
@@ -57,12 +57,20 @@
     padding: 0 0.25rem;
     border-radius: 0.25rem;
 
-    @apply bg-interactive-100;
+    background-color: var(--color-interactive-100);
   }
   ul {
     list-style: disc inside;
   }
   pre {
     white-space: pre-wrap;
+  }
+</style>
+
+<style>
+  .article-date {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--color-secondary-500);
   }
 </style>
