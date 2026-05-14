@@ -4,7 +4,7 @@
 
 <footer bind:clientHeight={footerheight}><span> Contact me via my form </span></footer>
 
-<style lang="postcss">
+<style>
   footer {
     display: grid;
     position: fixed;

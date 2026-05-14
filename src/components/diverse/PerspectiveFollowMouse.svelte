@@ -30,7 +30,7 @@
   <slot />
 </div>
 
-<style lang="postcss">
+<style>
   div {
     box-shadow: 8px 8px 8px var(--color-primary-500);
     width: fit-content;

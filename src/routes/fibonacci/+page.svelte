@@ -8,10 +8,14 @@
 </script>
 
 <h1>Fibonacci with TanStack Query</h1>
-  <label>
-  <button on:click={() => (n = Math.min(n + 1, 30))} class="bounce-btn"
-    >+1</button
-  ><input type="range" step="1" bind:value={n} min="1" max="30" />{n}</label
+<label>
+  <button on:click={() => (n = Math.min(n + 1, 30))} class="bounce-btn">+1</button><input
+    type="range"
+    step="1"
+    bind:value={n}
+    min="1"
+    max="30"
+  />{n}</label
 >
 <div class="outer" bind:clientWidth>
   <Fibonacci {n} {clientWidth} />
@@ -35,7 +39,8 @@
   }
 
   @keyframes bounce {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(-25%);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }

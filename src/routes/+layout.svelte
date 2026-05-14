@@ -11,10 +11,7 @@
 <Header bind:headerheight />
 <div class="layout-row" style="min-height: calc(100vh - {headerheight}px - {footerheight}px);">
   <div class="sidebar-left"></div>
-  <main
-    class="content"
-    style:padding-bottom="{footerheight + 8}px"
-  >
+  <main class="content" style:padding-bottom="{footerheight + 8}px">
     <slot />
   </main>
   <div class="sidebar-right"></div>
@@ -44,8 +41,14 @@
   }
 
   @media (min-width: 640px) {
-    .sidebar-left { width: 100%; }
-    .sidebar-right { width: 100%; }
-    main.content { min-width: 620px; }
+    .sidebar-left {
+      width: 100%;
+    }
+    .sidebar-right {
+      width: 100%;
+    }
+    main.content {
+      min-width: 620px;
+    }
   }
 </style>

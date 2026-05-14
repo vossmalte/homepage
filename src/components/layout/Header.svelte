@@ -9,7 +9,7 @@
   </nav>
 </header>
 
-<style lang="postcss">
+<style>
   header {
     position: sticky;
     z-index: 99;
@@ -59,7 +59,12 @@
   }
 
   @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
   }
 </style>
