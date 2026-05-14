@@ -65,9 +65,7 @@
   pre {
     white-space: pre-wrap;
   }
-</style>
 
-<style>
   .article-date {
     font-size: 0.75rem;
     line-height: 1rem;

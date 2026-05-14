@@ -49,7 +49,6 @@
     "./css/css-reset.css": "./package/css/css-reset.css",
     "./css/global.css": "./package/css/global.css",
     "./css/landing-card-animation.css": "./package/css/landing-card-animation.css",
-    "./css/tailwind.css": "./package/css/tailwind.css",
     "./ts/math": {
       "types": "./package/ts/math.d.ts",
       "default": "./package/ts/math.js"

@@ -57,9 +57,7 @@
       var(--color-interactive-400) 93.6%
     );
   }
-</style>
 
-<style>
   @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
