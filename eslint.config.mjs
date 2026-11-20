@@ -7,8 +7,11 @@ import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import ts from 'typescript-eslint';
 import unicorn from 'eslint-plugin-unicorn';
-import svelteConfig from './svelte.config.js';
+import { loadConfig } from '@sveltejs/load-config';
 
+const loadedConfig = await loadConfig('./', { traverse: false });
+if (loadedConfig && 'error' in loadedConfig) throw loadedConfig.error;
+const svelteConfig = loadedConfig?.config;
 const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
 
 export default defineConfig(
@@ -16,7 +19,7 @@ export default defineConfig(
   js.configs.recommended,
   ...ts.configs.recommended,
   ...svelte.configs.recommended,
-  unicorn.configs['flat/recommended'],
+  unicorn.configs.recommended,
   prettier,
   ...svelte.configs.prettier,
   {
@@ -38,6 +41,20 @@ export default defineConfig(
         parser: ts.parser,
         svelteConfig
       }
+    }
+  },
+  {
+    files: ['**/*.svelte'],
+    rules: {
+      // Svelte instance scripts update per-component state from event handlers.
+      'unicorn/no-top-level-assignment-in-function': 'off'
+    }
+  },
+  {
+    files: ['src/routes/**/+*.{js,ts}'],
+    rules: {
+      // SvelteKit requires this exact route option name.
+      'unicorn/consistent-boolean-name': ['error', { ignore: ['^prerender$'] }]
     }
   },
   {

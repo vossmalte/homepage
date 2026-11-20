@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
   import type { PageServerData } from './$types';
   export let data: PageServerData;
 </script>
@@ -9,8 +10,12 @@
 </svelte:head>
 
 <ul>
-  {#each data.articles as { attributes, articleId }}
-    <li><a href={'blog/article/' + articleId}>{attributes?.title ?? 'A blog article'}</a></li>
+  {#each data.articles as { attributes, articleId } (articleId)}
+    <li>
+      <a href={resolve('/blog/article/[...articleId]', { articleId })}>
+        {attributes?.title ?? 'A blog article'}
+      </a>
+    </li>
   {/each}
 </ul>
 

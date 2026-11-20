@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
   import ObjectCard from '../../components/diverse/ObjectCard.svelte';
   import PerspectiveFollowMouse from '../../components/diverse/PerspectiveFollowMouse.svelte';
   import ExternalLink from '../../components/ExternalLink.svelte';
@@ -20,15 +21,15 @@
       <li>location: Karlsruhe 🇩🇪</li>
     </ul>
     <ul slot="methods">
-      <li><a href="/programming">writeCode()</a></li>
+      <li><a href={resolve('/programming')}>writeCode()</a></li>
       <li>reviewCode()</li>
-      <li><a href="/frisbee">playFrisbee()</a></li>
+      <li><a href={resolve('/frisbee')}>playFrisbee()</a></li>
       <li>learn()</li>
     </ul>
   </ObjectCard>
 </PerspectiveFollowMouse>
 <div class="spacer"></div>
-<a class="bottom" href="/impressum">Impressum</a>
+<a class="bottom" href={resolve('/impressum')}>Impressum</a>
 
 <style>
   .spacer {

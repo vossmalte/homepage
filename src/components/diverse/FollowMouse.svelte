@@ -1,6 +1,6 @@
 <script lang="ts">
   import { spring, tweened } from 'svelte/motion';
-  import { coordinateMinus, coordinateRadians, type Coordinate } from '$lib/ts/math';
+  import { coordinateMinus, coordinateRadians, type Coordinate } from '#lib/ts/math.ts';
   import { sineOut } from 'svelte/easing';
 
   export const position = spring<Coordinate>(

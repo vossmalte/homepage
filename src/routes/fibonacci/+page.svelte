@@ -15,8 +15,8 @@
     bind:value={n}
     min="1"
     max="30"
-  />{n}</label
->
+  />{n}
+</label>
 <div class="outer" bind:clientWidth>
   <Fibonacci {n} {clientWidth} />
 </div>

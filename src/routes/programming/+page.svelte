@@ -6,8 +6,10 @@
   <p>
     My first experience with a terminal was on Windows when I started exploring batch scripting. In
     school, I was introduced to programming through <a
-      href="https://www.inf-schule.de/infschule/softwarewerkzeuge/karol">Robot Karol</a
-    >, where we were tasked with solving concrete problems by writing programs to manipulate the
+      href="https://www.inf-schule.de/infschule/softwarewerkzeuge/karol"
+    >
+      Robot Karol
+    </a>, where we were tasked with solving concrete problems by writing programs to manipulate the
     environment. I found it quite challenging at first. However, later, I had an exceptional teacher
     who taught us programming using Python 3 and
     <a href="https://vpython.org/index6.html">VPython</a>, which made the experience enjoyable as I
@@ -37,9 +39,9 @@
     to build a multi-tenant white-label solution for managing construction contractors. I am part of
     a highly skilled team, and it is a pleasure to contribute to a tool that accelerates the rollout
     of renewable energies. Additionally, using and contributing to open-source software gives me the
-    feeling of <a href="https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants"
-      >standing on the shoulders of giants</a
-    >.
+    feeling of <a href="https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants">
+      standing on the shoulders of giants
+    </a>.
   </p>
 </article>
 

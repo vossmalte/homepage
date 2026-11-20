@@ -1,11 +1,12 @@
 <script lang="ts">
   import { slide } from 'svelte/transition';
   import { createQuery, useQueryClient } from '@tanstack/svelte-query';
+  import FibSquare from './FibSquare.svelte';
 
   let { n = 10 }: { n?: number } = $props();
 
   let client = useQueryClient();
-  let getResult = $derived(client.getQueryData<number>(['fib', n]));
+  let cachedResult = $derived(client.getQueryData<number>(['fib', n]));
   let query = createQuery(() => ({ queryKey: ['fib', n] }));
 
   let flexDirection = $derived.by(() => {
@@ -47,7 +48,7 @@
 </script>
 
 <div style:flex-direction={flexDirection}>
-  {#if getResult || query.data}
+  {#if cachedResult || query.data}
     <div
       class="square"
       style:height="{R}px"
@@ -56,15 +57,15 @@
       style:background-color={backgroundColor}
       in:slide={{
         axis: n % 2 === 1 ? 'x' : 'y',
-        duration: getResult === undefined ? 400 : 0,
-        delay: getResult === undefined ? 400 : 0
+        duration: cachedResult === undefined ? 400 : 0,
+        delay: cachedResult === undefined ? 400 : 0
       }}
     >
       <p>{query.data}</p>
     </div>
   {/if}
   {#if n > 1}
-    <svelte:self n={n - 1} />
+    <FibSquare n={n - 1} />
   {/if}
 </div>
 

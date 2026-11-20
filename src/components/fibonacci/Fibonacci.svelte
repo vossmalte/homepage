@@ -19,12 +19,11 @@
         // return new Promise((resolve) => setTimeout(resolve, 1000)).then(() => n1 + n2);
         return n1 + n2;
       },
-      staleTime: Number.POSITIVE_INFINITY
+      staleTime: Infinity
     }
   });
   function fib(n: number): number {
-    if (n < 2) return n;
-    return fib(n - 1) + fib(n - 2);
+    return n < 2 ? n : fib(n - 1) + fib(n - 2);
   }
 </script>
 

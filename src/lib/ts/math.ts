@@ -1,6 +1,6 @@
 function zipWith<A, B = A, C = A>(operator: (a: A, b: B) => C) {
   return function (a: A[], b: B[]): C[] {
-    if (!(a.length === b.length)) throw new DOMException('arrays must have same length');
+    if (a.length !== b.length) throw new DOMException('arrays must have same length');
     const result = a.map((c, index) => operator(c, b[index]));
     // console.table({ a, b, op: String(operator), result });
     return result;
@@ -26,6 +26,5 @@ export function coordinateMinus(a: Coordinate, b: Coordinate): Coordinate {
 }
 
 export function coordinateRadians(a: Coordinate): number {
-  if (Math.abs(a.x) < 10) return 0;
-  return Math.atan(a.y / a.x);
+  return Math.abs(a.x) < 10 ? 0 : Math.atan(a.y / a.x);
 }

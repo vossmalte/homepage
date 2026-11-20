@@ -1,4 +1,5 @@
 <script>
+  import { resolve } from '$app/paths';
   import LandingCard from '../components/diverse/LandingCard.svelte';
   import '../lib/css/landing-card-animation.css';
 </script>
@@ -14,7 +15,7 @@
     backgroundUrl="/landingcard/frisbee.webp"
     backgroundAnimation="frisbee"
   >
-    <a class="card-frisbee" href="/frisbee">Frisbee</a>
+    <a class="card-frisbee" href={resolve('/frisbee')}>Frisbee</a>
   </LandingCard>
   <LandingCard
     backgroundUrl="/landingcard/programming.webp"
@@ -22,7 +23,7 @@
     backgroundSize="500%"
     backgroundPosition="50% 70%"
   >
-    <a class="card-programming" href="/programming">Programming</a>
+    <a class="card-programming" href={resolve('/programming')}>Programming</a>
   </LandingCard>
   <LandingCard
     backgroundUrl="/landingcard/math.webp"
@@ -30,10 +31,10 @@
     backgroundSize="240%"
     backgroundPosition="50% 70%"
   >
-    <a class="card-math" href="/math">Math</a>
+    <a class="card-math" href={resolve('/math')}>Math</a>
   </LandingCard>
   <LandingCard backgroundUrl="/landingcard/blog.webp" backgroundAnimation="blog">
-    <a class="card-blog" href="/blog">Blog</a>
+    <a class="card-blog" href={resolve('/blog')}>Blog</a>
   </LandingCard>
 </nav>
 

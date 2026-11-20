@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
   export let headerheight: number;
 </script>
 
 <header bind:clientHeight={headerheight}>
   <nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
+    <a href={resolve('/')}>Home</a>
+    <a href={resolve('/about')}>About</a>
   </nav>
 </header>
 
